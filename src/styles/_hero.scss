@@ -1,0 +1,37 @@
+.hero{
+  margin-block-start: 48px;
+  inline-size: 100%;
+
+  &__wrapper{
+    inline-size: 100%;
+    padding-inline: 1.5rem;
+    gap: 2.0625rem;
+  }
+
+  &__image{
+    inline-size: 19rem;
+    block-size: 14.0625rem;
+    background-image: url('../../images/illustration-intro.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__content{
+    color: white;
+    text-align: center;
+    gap: 2rem;
+
+    h1{
+      font-size: clamp(1.5rem, 1.1479rem + 1.5023vw, 2.5rem);
+      line-height: clamp(2.25rem, 1.7218rem + 2.2535vw, 3.75rem);
+      max-inline-size: 30ch;
+    }
+
+    p{
+      margin-top: -1.0625rem;
+      font-size: clamp(0.875rem, 0.7430rem + 0.5634vw, 1.25rem);
+      line-height: clamp(1.25rem, 1.0299rem + 0.9390vw, 1.875rem);
+      max-inline-size: 55ch;
+    }
+  }
+}
