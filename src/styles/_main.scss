@@ -2,6 +2,8 @@
   inline-size: 100%;
   margin-block-start: 7.5rem;
 
+  margin-bottom: 5rem;
+
   @include desktop{
     margin-block-start: 9.875rem;
   }
@@ -65,6 +67,80 @@
       font-size: .875rem;
       line-height: 21px;
       max-inline-size: 49ch;
+    }
+  }
+
+  // productive section
+
+  &__productive{
+    inline-size: 100%;
+    margin-block-start: 10rem;
+
+    @include desktop{
+      margin-block-start: 8.5625rem;
+    }
+
+    &__wrapper{
+      inline-size: 100%;
+      max-inline-size: 77.125rem;
+      gap: 3rem;
+
+      @include desktop{
+        flex-direction: row;
+        gap: 3.5625rem;
+      }
+    }
+  }
+
+  &__productive__image{
+    block-size: 14.3125rem;
+    inline-size: 19rem;
+
+    background: url('../../images/illustration-stay-productive.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @include desktop{
+      inline-size: 38.375rem;
+      block-size: 28.9375rem;
+    }
+  }
+
+  &__productive__content{
+   text-align: left;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 1rem;
+
+    h3{
+      text-align: center;
+      font-size: clamp(1.125rem, 0.6408rem + 2.0657vw, 2.5rem);
+      line-height:  clamp(1.5rem, 0.9278rem + 2.4413vw, 3.125rem);
+    }
+
+    p{
+      font-size: clamp(0.875rem, 0.8310rem + 0.1878vw, 1rem);
+      line-height: clamp(1.3125rem, 1.2465rem + 0.2817vw, 1.5rem);
+    }
+
+    a{
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      inline-size: 20ch;
+
+      span{
+        block-size: 16px;
+        inline-size: 16px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+       
+      }
     }
   }
 }
