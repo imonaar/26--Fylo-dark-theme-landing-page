@@ -1,0 +1,70 @@
+.main{
+  inline-size: 100%;
+  margin-block-start: 7.5rem;
+
+  @include desktop{
+    margin-block-start: 9.875rem;
+  }
+
+  &__wrapper{
+    inline-size: 100%;
+    padding-inline: 1.5rem;
+  }
+
+  &__cards{
+    display: grid;
+    gap: 5rem;
+    inline-size: 100%;
+    max-inline-size: 55rem;
+
+    @include desktop{
+      grid-template-columns: 1fr 1fr;
+      gap: 4.875rem 2rem;
+    }
+  }
+
+  &__cards__card{
+    gap: 1.5rem;
+
+    @include desktop{
+      gap: 1rem;
+    }
+  }
+
+  &__cards__card__image{
+    block-size: 5rem;
+    inline-size: 5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include desktop{
+      block-size: 6.5rem;
+      inline-size: 6.5rem;
+    }
+
+    img{
+      display: block;
+      max-inline-size: 100%;
+      max-block-size: 100%;
+      object-fit: scale-down;
+    }
+  }
+
+  &__cards__card__content{
+    text-align: center;
+    gap: .5rem;
+
+    h2{
+      font-size: 1.25rem;
+      line-height: 24px;
+    }
+
+    p{
+      font-size: .875rem;
+      line-height: 21px;
+      max-inline-size: 49ch;
+    }
+  }
+}
