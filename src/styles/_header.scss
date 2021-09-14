@@ -2,12 +2,21 @@
   inline-size: 100%;
   padding-top: 1.5rem;
 
+  @include desktop{
+    padding-top: 4.5625rem;
+  }
+
   &__wrapper{
     inline-size: 100%;
     display: flex;
     justify-content: space-between;
     padding-inline: 1.5rem;
     block-size: 1.5rem; 
+
+    @include desktop{
+      padding-inline: 5rem;
+      block-size: 3.25rem;
+    }
   }
 
   &__logo{
@@ -26,10 +35,15 @@
       display: flex;
       gap: 1.5rem;
       block-size: 100%;
+
+      @include desktop{
+        gap: 3.5625rem;
+      }
     }
 
     li{
       block-size: 100%;
+      inline-size: 6ch;
     }
 
     a{
@@ -40,6 +54,37 @@
       font-size: .75rem;
       line-height: 14px;
       font-weight: 400;
+      position: relative;
+
+      &::after{
+        content: '';
+        block-size: 2px;
+        inline-size: 100%;
+        background-color: var(--White);
+
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: transform 300ms ease;
+
+        @include desktop{
+          bottom: 10px;
+        }
+      }
+
+      @include desktop{
+        font-size: 1rem;
+        line-height: 18px;
+      }
+
+      &:hover{
+        font-weight: 700;
+        &::after{
+          transform: scaleX(1)
+        }
+      }
     }
   }
 }

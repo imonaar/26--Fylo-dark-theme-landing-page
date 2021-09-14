@@ -81,4 +81,13 @@ p{
   font-family: 'Raleway', sans-serif;
   padding: 1rem 5rem;
   cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover{
+    opacity: 0.8;
+  }
+
+  &:active{
+    transform: scale(0.98);
+  }
 }

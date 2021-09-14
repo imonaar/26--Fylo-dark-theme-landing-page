@@ -1,6 +1,10 @@
 .hero{
-  margin-block-start: 48px;
+  margin-block-start: 3rem;
   inline-size: 100%;
+
+  @include desktop{
+    margin-block-start: 4.6875rem;
+  }
 
   &__wrapper{
     inline-size: 100%;
@@ -14,6 +18,11 @@
     background-image: url('../../images/illustration-intro.png');
     background-size: contain;
     background-repeat: no-repeat;
+
+    @include desktop{
+      block-size: 33.375rem;
+      inline-size: 45rem;
+    }
   }
 
   &__content{
@@ -28,10 +37,13 @@
     }
 
     p{
-      margin-top: -1.0625rem;
       font-size: clamp(0.875rem, 0.7430rem + 0.5634vw, 1.25rem);
       line-height: clamp(1.25rem, 1.0299rem + 0.9390vw, 1.875rem);
       max-inline-size: 55ch;
+
+      @include mobile{
+        margin-top: -1.0625rem;
+      }
     }
   }
 }
