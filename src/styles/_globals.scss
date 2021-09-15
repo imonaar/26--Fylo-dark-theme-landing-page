@@ -87,6 +87,12 @@ p{
   font-weight: 700;
   white-space: nowrap;
 
+  @include desktop{
+    font-size: 1rem;
+    line-height: 1.125rem;
+    padding: 1.125rem 5.9375rem;
+  }
+
   &:hover{
     opacity: 0.8;
   }
