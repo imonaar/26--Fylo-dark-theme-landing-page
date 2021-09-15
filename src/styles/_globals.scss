@@ -3,7 +3,7 @@
 --Dark-Blue-intro-and-emailsignup-background: hsl(217, 28%, 15%);
 --Dark-Blue-main-background: hsl(218, 28%, 13%);
 --Dark-Blue-footer-background: hsl(216, 53%, 9%);
---Dark-Blue-testimonials-background-: hsl(219, 30%, 18%);
+--Dark-Blue-testimonials-background: hsl(219, 30%, 18%);
 
 //### Accent
 
@@ -32,6 +32,8 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  overflow-x: hidden;
   
   font-family: 'Open Sans', sans-serif;
   color: var(--White);
@@ -61,7 +63,7 @@ a{
   align-items: center;
 }
 
-h1, h2, h3{
+h1, h2, h3, h4{
   margin: 0;
   font-family: 'Raleway', sans-serif;
 }
@@ -82,6 +84,8 @@ p{
   padding: 1rem 5rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-weight: 700;
+  white-space: nowrap;
 
   &:hover{
     opacity: 0.8;

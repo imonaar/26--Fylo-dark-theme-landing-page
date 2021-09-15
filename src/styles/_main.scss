@@ -2,8 +2,6 @@
   inline-size: 100%;
   margin-block-start: 7.5rem;
 
-  margin-bottom: 5rem;
-
   @include desktop{
     margin-block-start: 9.875rem;
   }
@@ -12,6 +10,8 @@
     inline-size: 100%;
     padding-inline: 1.5rem;
   }
+
+  
 
   &__cards{
     display: grid;
@@ -108,16 +108,26 @@
   }
 
   &__productive__content{
-   text-align: left;
-   display: flex;
-   flex-direction: column;
-   align-items: flex-start;
-   gap: 1rem;
+    inline-size: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+
+    @include desktop{
+      max-inline-size: 35.1875rem;
+    }
 
     h3{
       text-align: center;
       font-size: clamp(1.125rem, 0.6408rem + 2.0657vw, 2.5rem);
       line-height:  clamp(1.5rem, 0.9278rem + 2.4413vw, 3.125rem);
+
+      @include desktop{
+        text-align: left;
+        max-inline-size: 20ch;
+      }
     }
 
     p{
@@ -129,17 +139,220 @@
       display: inline-flex;
       align-items: center;
       gap: 7px;
-      inline-size: 20ch;
+      position: relative;
+
+      font-size: .75rem;
+      line-height: 16.34px;
+      color: var(--Cyan-inside-calltoaction-gradient) ;
+
+
+      &::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        block-size: 1px;
+        inline-size: 100%;
+        background-color: var(--Cyan-inside-calltoaction-gradient) ;
+      }
 
       span{
-        block-size: 16px;
-        inline-size: 16px;
+        block-size: 12px;
+        inline-size: 12px;
+        opacity: 1;
 
         display: flex;
         align-items: center;
         justify-content: center;
+      }
+    }
+  }
 
-       
+  //feedback
+
+  &__feedback{
+    margin-block-start: 10rem;
+    inline-size: 100%;
+
+    @include desktop{
+      margin-block-start: 7.5rem;
+    }
+  }
+
+  &__feedback__cards{
+    inline-size: 100%;
+    gap: 1.5rem;
+    max-inline-size: 37.5rem;
+
+    @include desktop{
+      gap: 2.5rem;
+      max-inline-size: 73.75rem;
+      flex-direction: row;
+    }
+  }
+
+  &__feedback__card{
+    padding: 1.25rem 1.5rem;
+    background-color: var(--Dark-Blue-testimonials-background);
+    box-shadow: 0px 0px 8px 4px rgba(56, 56, 56, 0.0458843);
+    border-radius: 3.93258px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+
+    
+
+    &:first-of-type{
+
+      &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50px;
+        height: 18px;
+        transform: translateY(-100%);
+        background: url('../../images/bg-quotes.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        z-index: -1;
+
+        @include desktop{
+          height: 42px;
+          background-size: cover;
+          transform: translateY(-80%);
+          left: -0.5rem;
+        }
+      }
+    }
+
+    @include desktop{
+      padding-inline:1.5rem;
+      padding-block-start: 2.5rem;
+      gap: 1.5rem;
+    }
+
+
+    &__content{
+      p{
+        font-size: clamp(0.625rem, 0.5370rem + 0.3756vw, 0.875rem);
+        line-height: clamp(1.125rem, 1.0590rem + 0.2817vw, 1.3125rem);
+      }
+    }
+  }
+
+  &__feedback__card__profile{
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    align-items: center;
+    gap: 8px;
+
+    .image{
+      block-size: 24px;
+      inline-size: 24px;
+      border-radius: 100%;
+      overflow: hidden;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img{
+        display: block;
+        max-inline-size: 100%;
+        max-block-size: 100%;
+      }
+    }
+
+    .name{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 4px;
+
+      p{
+        font-size: 10px;
+        line-height: 12px;
+        font-weight: 700px;
+      }
+
+      span{
+        font-size: 8px;
+        line-height: 10px;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+
+  //form section
+
+  &__form{
+    inline-size: 100%;
+    margin-top: 10rem;
+
+    @include desktop{
+      transform: translateY(115px);
+    }
+
+    &__wrapper{
+      inline-size: 100%;
+      padding: 1.75rem 2.5rem;
+      gap: 2rem;
+      background-color: var(--Dark-Blue-intro-and-emailsignup-background);
+      box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.254274);
+      border-radius: 9px;
+      max-inline-size: 37.5rem;
+
+      @include desktop{
+        max-inline-size: 53.9375rem;
+        padding-inline: 4.8125rem;
+        padding-block: 2.625rem 1.375rem;
+      }
+    }
+
+    &__content{
+      display: grid;
+      gap: 1rem;
+      justify-items: center;
+
+      h4{
+        font-size: clamp(1.125rem, 0.8169rem + 1.3146vw, 2rem);
+        line-height: clamp(1.5rem, 0.9718rem + 2.2535vw, 3rem);
+      }
+
+      p{
+        text-align: center;
+        font-size: .875rem;
+        line-height: 21px;
+      }
+    }
+
+    form{
+      display: grid;
+      gap: 1.5rem;
+      inline-size: 100%;
+
+      input{
+        inline-size: 100%;
+        border: 0;
+        background-color: white;
+        border-radius: 24px;
+        padding: 14px;
+        font-size: 1rem;
+      }
+
+      @include desktop{
+        gap: 28px;
+        grid-template-columns: 1fr 200px;
+      }
+
+      button{
+        @include desktop{
+          padding: .9375rem 1.625rem
+        }
       }
     }
   }
