@@ -78,4 +78,33 @@
     }
     
   }
+
+  .socials{
+    min-inline-size: 14ch;
+
+    @include mobile{
+      align-self: center;
+    }
+    
+    a{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      block-size: 32px;
+      inline-size: 32px;
+      border-radius: 100%;
+      border: 1px solid white;
+      margin-right: 5px;
+      transition: all 300ms ease;
+
+      &:hover{
+        border-color: var(--Cyan-inside-calltoaction-gradient);
+
+        i{
+          color: var(--Cyan-inside-calltoaction-gradient);
+        }
+      }
+    }
+  }
 }
