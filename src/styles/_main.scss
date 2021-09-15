@@ -1,6 +1,7 @@
 .main{
   inline-size: 100%;
   margin-block-start: 7.5rem;
+  background-color: var(--Dark-Blue-main-background);
 
   @include desktop{
     margin-block-start: 9.875rem;

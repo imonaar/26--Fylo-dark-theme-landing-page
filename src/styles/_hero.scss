@@ -1,9 +1,10 @@
 .hero{
-  margin-block-start: 3rem;
+  padding-block-start: 3rem;
   inline-size: 100%;
+  background-color: var(--Dark-Blue-intro-and-emailsignup-background);
 
   @include desktop{
-    margin-block-start: 4.6875rem;
+   padding-block-start: 4.6875rem;
   }
 
   &__wrapper{

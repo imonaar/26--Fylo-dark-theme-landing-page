@@ -1,6 +1,8 @@
 .header{
   inline-size: 100%;
   padding-top: 1.5rem;
+  background-color: var(--Dark-Blue-intro-and-emailsignup-background);
+
 
   @include desktop{
     padding-top: 4.5625rem;
