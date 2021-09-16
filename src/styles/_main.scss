@@ -78,7 +78,7 @@
     margin-block-start: 10rem;
 
     @include desktop{
-      margin-block-start: 11.1875rem;
+      margin-block-start: 8.5625rem;
     }
 
     &__wrapper{
@@ -118,6 +118,7 @@
 
     @include desktop{
       max-inline-size: 35.1875rem;
+      padding-top: 2.5rem;
     }
 
     h3{
@@ -128,6 +129,7 @@
       @include desktop{
         text-align: left;
         max-inline-size: 20ch;
+        margin-bottom: .1875rem;
       }
     }
 
@@ -146,12 +148,18 @@
       line-height: 16.34px;
       color: var(--Cyan-inside-calltoaction-gradient) ;
 
+      @include desktop{
+        font-size: 1rem;
+        line-height: 21px;
+        margin-top: 0.5rem;
+      }
+
 
       &::after{
         content: '';
         position: absolute;
         left: 0;
-        bottom: -4px;
+        bottom: -7px;
         block-size: 1px;
         inline-size: 100%;
         background-color: var(--Cyan-inside-calltoaction-gradient) ;
@@ -176,7 +184,7 @@
     inline-size: 100%;
 
     @include desktop{
-      margin-block-start: 7.5rem;
+      margin-block-start: 11.1875rem;
     }
   }
 
@@ -241,6 +249,9 @@
       p{
         font-size: clamp(0.625rem, 0.5370rem + 0.3756vw, 0.875rem);
         line-height: clamp(1.125rem, 1.0590rem + 0.2817vw, 1.3125rem);
+        @include desktop{
+          letter-spacing: 0.5px;
+        }
       }
     }
   }
@@ -278,6 +289,7 @@
         font-size: 10px;
         line-height: 12px;
         font-weight: 700px;
+        font-weight: bold;
       }
 
       span{
@@ -296,6 +308,7 @@
 
     @include desktop{
       transform: translateY(115px);
+      margin-top: 6rem;
     }
 
     &__wrapper{

@@ -5,17 +5,18 @@
   padding-bottom: 3.25rem;
 
   @include desktop{
-    padding-top: 10.5625rem;
+    padding-top: 12.5625rem;
   }
 
   &__wrapper{
     inline-size: 100%;
-    max-inline-size: 80.5rem;
+    max-inline-size: 77.5rem;
     gap: 2.1875rem;
     padding-inline: 1.5rem;
 
     @include desktop {
       gap: 3.25rem;
+      
     }
   }
 
@@ -23,10 +24,10 @@
     inline-size: 100%;
     display: flex;
     justify-content: flex-start;
-    block-size: 2rem;
+    block-size: 3rem;
 
     img{
-      block-size: 2rem;
+      block-size: 3rem;
     }
   }
 

@@ -17,17 +17,19 @@
 
     @include desktop{
       padding-inline: 5rem;
-      block-size: 3.25rem;
+      block-size: 4.375rem;
     }
   }
 
   &__logo{
     block-size: 100%;
+    display: flex;
+    align-items: center;
 
     img{
       display: block;
       max-block-size: 100%;
-      inline-size: 80px;
+      inline-size: 100%;
     }
   }
 
