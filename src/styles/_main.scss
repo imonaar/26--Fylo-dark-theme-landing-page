@@ -1,11 +1,11 @@
 .main{
   inline-size: 100%;
-  padding-block-start: 7.5rem;
+  margin-block-start: 7.5rem;
   background-color: var(--Dark-Blue-main-background);
 
   @include desktop{
     margin-block-start: 9.875rem;
-    padding-block-start: 0;
+   
   }
 
   &__wrapper{
