@@ -38,7 +38,11 @@ body{
   font-family: 'Open Sans', sans-serif;
   color: var(--White);
 
-  background-color: var(--Dark-Blue-main-background);
+  background: linear-gradient(to bottom, var(--Dark-Blue-intro-and-emailsignup-background), var(--Dark-Blue-main-background));
+  
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .content{
@@ -99,5 +103,20 @@ p{
 
   &:active{
     transform: scale(0.98);
+  }
+}
+
+.content{
+  background-image: url('../../images/bg-curvy-mobile.svg');
+  background-size: 100% 300px;
+  background-repeat: no-repeat;
+  background-position:center 300px;
+  
+
+  @include desktop{
+    background-image: url('../../images/bg-curvy-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 449px;
+    background-position:center 848px;
   }
 }

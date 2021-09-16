@@ -1,10 +1,11 @@
 .main{
   inline-size: 100%;
-  margin-block-start: 7.5rem;
+  padding-block-start: 7.5rem;
   background-color: var(--Dark-Blue-main-background);
 
   @include desktop{
     margin-block-start: 9.875rem;
+    padding-block-start: 0;
   }
 
   &__wrapper{
@@ -173,6 +174,18 @@
         display: flex;
         align-items: center;
         justify-content: center;
+      }
+
+      &:hover{
+        color: white;
+
+        &::after{
+          background-color: white;
+        }
+
+        svg{
+          fill: white;
+        }
       }
     }
   }

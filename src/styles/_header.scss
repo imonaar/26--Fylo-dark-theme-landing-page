@@ -1,7 +1,7 @@
 .header{
   inline-size: 100%;
   padding-top: 1.5rem;
-  background-color: var(--Dark-Blue-intro-and-emailsignup-background);
+  // background-color: var(--Dark-Blue-intro-and-emailsignup-background);
 
 
   @include desktop{
@@ -17,7 +17,7 @@
 
     @include desktop{
       padding-inline: 5rem;
-      block-size: 4.375rem;
+      block-size: 3.25rem;
     }
   }
 
@@ -27,9 +27,12 @@
     align-items: center;
 
     img{
-      display: block;
-      max-block-size: 100%;
+      block-size: 1.5rem;
       inline-size: 100%;
+
+      @include desktop{
+        block-size: 3.25rem;
+      }
     }
   }
 
